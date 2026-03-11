@@ -39,3 +39,8 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Meus dados e imagens do Divinity
+src/data/recipes.ts
+src/data/ingredients.ts
+assets
