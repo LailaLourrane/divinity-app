@@ -25,10 +25,8 @@ export default function FavoritesScreen({ navigation }: any) {
       }
     };
 
-    // Carrega a primeira vez que a tela abre
     loadFavorites();
 
-    // Cria um "ouvinte" que recarrega a lista sempre que entrares neste ecrã
     const unsubscribe = navigation.addListener('focus', () => {
       loadFavorites();
     });
@@ -41,7 +39,7 @@ export default function FavoritesScreen({ navigation }: any) {
   return (
     <View style={{ flex: 1, backgroundColor: '#000000', paddingTop: 50 }}>
       
-      {/* CABEÇALHO */}
+      
       <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: '5%', marginBottom: 30 }}>
         <TouchableOpacity onPress={() => navigation.goBack()} style={{ marginRight: 15 }}>
           <Ionicons name="chevron-back" size={32} color="#E0E0E0" />
@@ -51,7 +49,7 @@ export default function FavoritesScreen({ navigation }: any) {
         </Text>
       </View>
 
-      {/* LISTA DE FAVORITOS */}
+    
       <ScrollView contentContainerStyle={{ paddingHorizontal: '5%', paddingBottom: 20 }}>
         {favoriteRecipes.length === 0 ? (
           <View style={{ alignItems: 'center', marginTop: 40 }}>
