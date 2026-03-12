@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image } from 'react-native'; // <-- Image tem de estar aqui!
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export interface RecipeCardProps {
@@ -17,7 +17,6 @@ export default function RecipeCard({ id, name, imageUrl, ingredientsText }: Reci
       style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#121212', borderColor: '#383838', borderWidth: 2, borderRadius: 8, padding: 15, marginBottom: 15, width: '90%' }}
     >
       <Image 
-        // A MÁGICA ESTÁ AQUI: Ele descobre sozinho se é um link ou um arquivo da pasta!
         source={typeof imageUrl === 'string' ? { uri: imageUrl } : imageUrl} 
         style={{ width: 45, height: 45, resizeMode: 'contain', marginRight: 15 }} 
       />
