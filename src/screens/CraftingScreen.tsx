@@ -77,7 +77,7 @@ export default function CraftingScreen({ route, navigation }: any) {
   return (
     <View style={{ flex: 1, backgroundColor: '#000000', paddingTop: 50 }}>
       
-      {/* CABEÇALHO COM O BOTÃO DE FAVORITAR */}
+     
       <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: '5%', marginBottom: 30 }}>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
           <TouchableOpacity onPress={() => navigation.goBack()} style={{ marginRight: 15 }}>
