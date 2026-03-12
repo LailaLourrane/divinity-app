@@ -10,7 +10,6 @@ import { useLanguage } from '../contexts/LanguageContext';
 export default function HomeScreen({ navigation }: any) {
   const [searchText, setSearchText] = useState('');
   const [isModalVisible, setIsModalVisible] = useState(false); 
-  // NOVIDADE: A memória da nossa categoria ativa
   const [activeCategory, setActiveCategory] = useState('All');
   
   const { t } = useLanguage();
@@ -77,10 +76,10 @@ export default function HomeScreen({ navigation }: any) {
       <FilterModal 
         visible={isModalVisible} 
         onClose={() => setIsModalVisible(false)} 
-        activeCategory={activeCategory} // Passamos a memória
+        activeCategory={activeCategory}
         onSelectCategory={(category) => {
-          setActiveCategory(category); // Atualiza a categoria
-          setIsModalVisible(false);    // Fecha o modal automaticamente para um UX melhor!
+          setActiveCategory(category);
+          setIsModalVisible(false);
         }}
       />
     </View>
