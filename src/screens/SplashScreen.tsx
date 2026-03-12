@@ -21,11 +21,9 @@ export default function SplashScreen({ navigation }: any) {
         })
       ])
     ]).start(() => {
-      // Vai para a Home e não volta mais para cá
       navigation.replace('Home');
     });
     
-  // AQUI: A lista vazia garante que a animação só roda uma vez na vida!
   }, []); 
 
   return (
