@@ -15,7 +15,7 @@ export default function HomeScreen({ navigation }: any) {
   
   const { t } = useLanguage();
 
-  // O NOSSO SUPER FILTRO DUPLO (Pesquisa de Texto + Categoria do Modal)
+  
   const filteredRecipes = RECIPES.filter((recipe) => {
     const matchesSearch = recipe.name.toLowerCase().includes(searchText.toLowerCase());
     const matchesCategory = activeCategory === 'All' || recipe.category === activeCategory;
@@ -26,7 +26,7 @@ export default function HomeScreen({ navigation }: any) {
   return (
     <View style={{ flex: 1, backgroundColor: '#000000', paddingTop: 50 }}>
       
-      {/* CABEÇALHO */}
+      
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: '5%', marginBottom: 20 }}>
         <Text style={{ color: '#E0E0E0', fontSize: 36, fontWeight: 'bold' }}>{t('homeTitle')}</Text>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 20 }}>
@@ -36,7 +36,7 @@ export default function HomeScreen({ navigation }: any) {
         </View>
       </View>
 
-      {/* BARRA DE PESQUISA E BOTÃO DO MODAL */}
+      
       <View style={{ paddingHorizontal: '5%', marginBottom: 20 }}>
         <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#121212', borderColor: '#504f53', borderWidth: 2, borderRadius: 8, paddingHorizontal: 15 }}>
           <Ionicons name="search" size={20} color="#888888" style={{ marginRight: 10 }} />
@@ -56,7 +56,7 @@ export default function HomeScreen({ navigation }: any) {
         </TouchableOpacity>
       </View>
 
-      {/* LISTA DE RECEITAS */}
+      
       <ScrollView contentContainerStyle={{ paddingBottom: 20 }}>
         <Text style={{ color: '#888888', fontSize: 12, paddingHorizontal: '5%', marginBottom: 15, textAlign: 'center', letterSpacing: 2 }}>
           {t('recentCrafts')}
@@ -73,7 +73,7 @@ export default function HomeScreen({ navigation }: any) {
         </View>
       </ScrollView>
 
-      {/* MODAL DE FILTROS COM OS NOVOS PODERES */}
+     
       <FilterModal 
         visible={isModalVisible} 
         onClose={() => setIsModalVisible(false)} 
