@@ -38,7 +38,7 @@ export default function SettingsScreen({ navigation }: any) {
           <Ionicons name="chevron-back" size={32} color="#E0E0E0" />
         </TouchableOpacity>
         <Text style={{ color: '#E0E0E0', fontSize: 36, fontWeight: 'bold' }}>
-          {t('settingsTitle')} {/* Título traduzido! */}
+          {t('settingsTitle')}
         </Text>
       </View>
 
@@ -52,7 +52,7 @@ export default function SettingsScreen({ navigation }: any) {
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Ionicons name="globe-outline" size={28} color="#555555" style={{ marginRight: 15 }} />
             <Text style={{ color: '#555555', fontSize: 20, fontWeight: 'bold' }}>
-              {t('changeLang')} {/* Texto traduzido! */}
+              {t('changeLang')}
             </Text>
           </View>
           <Text style={{ color: '#888888', fontSize: 14, fontWeight: 'bold' }}>
@@ -63,7 +63,7 @@ export default function SettingsScreen({ navigation }: any) {
         <TouchableOpacity onPress={handleDeleteProgress} style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#D0D0D0', padding: 15, borderRadius: 15 }}>
           <Ionicons name="trash-outline" size={28} color="#CC0000" style={{ marginRight: 15 }} />
           <Text style={{ color: '#CC0000', fontSize: 20, fontWeight: 'bold' }}>
-            {t('deleteProg')} {/* Texto traduzido! */}
+            {t('deleteProg')}
           </Text>
         </TouchableOpacity>
 
