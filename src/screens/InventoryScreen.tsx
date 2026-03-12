@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, TextInput, ScrollView, Image } from 'react-native'; // <-- Image adicionada!
+import { View, Text, TouchableOpacity, TextInput, ScrollView, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { INGREDIENTS } from '../data/ingredients';
@@ -91,7 +91,7 @@ export default function InventoryScreen({ navigation }: any) {
             return (
               <View key={item.id} style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#121212', borderColor: '#1A1A1A', borderWidth: 2, borderRadius: 15, padding: 15, marginBottom: 15 }}>
                 
-                {/* A MÁGICA DA IMAGEM NA MOCHILA AQUI! */}
+                
                 {item.imageUrl ? (
                   <Image source={typeof item.imageUrl === 'string' ? { uri: item.imageUrl } : item.imageUrl} style={{ width: 40, height: 40, resizeMode: 'contain', marginRight: 15 }} />
                 ) : (
