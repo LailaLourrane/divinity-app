@@ -2,11 +2,9 @@ import { View, Text, TouchableOpacity, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// NOVIDADE: Importando o nosso atalho do idioma
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function SettingsScreen({ navigation }: any) {
-  // Puxando as ferramentas do Dicionário
   const { t, toggleLanguage, lang } = useLanguage();
 
   const handleDeleteProgress = () => {
@@ -34,7 +32,7 @@ export default function SettingsScreen({ navigation }: any) {
   return (
     <View style={{ flex: 1, backgroundColor: '#000000', paddingTop: 50 }}>
       
-      {/* CABEÇALHO DINÂMICO */}
+      
       <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: '5%', marginBottom: 40 }}>
         <TouchableOpacity onPress={() => navigation.goBack()} style={{ marginRight: 15 }}>
           <Ionicons name="chevron-back" size={32} color="#E0E0E0" />
@@ -46,7 +44,7 @@ export default function SettingsScreen({ navigation }: any) {
 
       <View style={{ paddingHorizontal: '5%', gap: 15 }}>
         
-        {/* BOTÃO DE IDIOMA CONECTADO */}
+        
         <TouchableOpacity 
           onPress={toggleLanguage} 
           style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#D0D0D0', padding: 15, borderRadius: 15 }}
@@ -57,7 +55,6 @@ export default function SettingsScreen({ navigation }: any) {
               {t('changeLang')} {/* Texto traduzido! */}
             </Text>
           </View>
-          {/* Mostra qual o idioma atual no cantinho do botão */}
           <Text style={{ color: '#888888', fontSize: 14, fontWeight: 'bold' }}>
             {t('currentLang')}
           </Text>
